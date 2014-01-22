@@ -32,4 +32,10 @@ while True:
 		k = string.split("|")
 		break;
 	l = l[1:]
-print (furl[dm-1]+k[0])
+entire_url = furl[dm-1]+k[1]
+print (entire_url)
+class MyOpener(urllib.request.FancyURLopener):
+	version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11'
+myopener = MyOpener()
+file_name = "test.jpg"
+myopener.retrieve(entire_url, file_name)
