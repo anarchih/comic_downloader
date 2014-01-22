@@ -14,7 +14,15 @@ k = []
 #l = l[1:]
 #print (l[0], l[1])
 string = ''
-for i in l:
+dm = 0
+while True:
+	if l[-1].isdigit():
+		dm=int(l[-1])
+	if l[-1]!='g':
+		l = l[:-1]	
+	else :
+		break;
+while True:
 #	l = l[1:]
 #	print (l[0])
 	if l[0] == "/":
