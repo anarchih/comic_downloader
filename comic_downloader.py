@@ -41,7 +41,8 @@ class MyOpener(urllib.request.FancyURLopener):
 myopener = MyOpener()
 file_name = "comic"
 entire_name = ""
-folder_name ="test"
+folder_name =""
+input(folder_name)
 os.system("mkdir "+folder_name)
 for i in range (0,len(k)):
 	entire_url = furl[dm-1] + k[i]
