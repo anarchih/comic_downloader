@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import shutil
+url = ""
+url.input()
 url = "http://mh.99770.cc/comic/2779/21390/"
 fp = urllib.request.urlopen(url)
 org_bytes = fp.read()
@@ -32,10 +34,15 @@ while True:
 		k = string.split("|")
 		break;
 	l = l[1:]
-entire_url = furl[dm-1]+k[1]
-print (entire_url)
+#entire_url = furl[dm-1]+k[1]
 class MyOpener(urllib.request.FancyURLopener):
 	version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11'
 myopener = MyOpener()
-file_name = "test.jpg"
-myopener.retrieve(entire_url, file_name)
+file_name = "comic"
+entire_name = ""
+for i in range (0,len(k)):
+	entire_url = furl[dm-1] + k[i]
+	entire_name = file_name + str(i+1) + ".jpg"
+	myopener.retrieve(entire_url, entire_name)
+#myopener = MyOpener()
+#myopener.retrieve(entire_url, file_name)
