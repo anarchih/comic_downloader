@@ -49,6 +49,6 @@ os.system("mkdir "+folder_name)
 for i in range (0,len(k)):
 	entire_url = furl[dm-1] + k[i]
 	entire_name = file_name + str(i+1) + ".jpg"
-	myopener.retrieve(entire_url, entire_name)
+	myopener.retrieve(entire_url,"./" + folder_name + "/" + entire_name)
 #myopener = MyOpener()
 #myopener.retrieve(entire_url, file_name)
