@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import shutil
+import os
 url = ""
-url.input()
+input(url)
 url = "http://mh.99770.cc/comic/2779/21390/"
 fp = urllib.request.urlopen(url)
 org_bytes = fp.read()
@@ -40,9 +41,12 @@ class MyOpener(urllib.request.FancyURLopener):
 myopener = MyOpener()
 file_name = "comic"
 entire_name = ""
+folder_name ="test"
+os.system("mkdir "+folder_name)
 for i in range (0,len(k)):
 	entire_url = furl[dm-1] + k[i]
 	entire_name = file_name + str(i+1) + ".jpg"
 	myopener.retrieve(entire_url, entire_name)
+	os.system("mv " + entire_name + " ./" + folder_name + "/" + entire_name)
 #myopener = MyOpener()
 #myopener.retrieve(entire_url, file_name)
