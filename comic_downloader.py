@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import shutil
-import os
 url = ""
 input(url)
 url = "http://mh.99770.cc/comic/2779/21390/"
@@ -41,13 +40,15 @@ class MyOpener(urllib.request.FancyURLopener):
 myopener = MyOpener()
 file_name = "comic"
 entire_name = ""
+<<<<<<< HEAD
 folder_name =""
 input(folder_name)
 os.system("mkdir "+folder_name)
+=======
+>>>>>>> parent of 60d27e0... make a folder for downloaded comic
 for i in range (0,len(k)):
 	entire_url = furl[dm-1] + k[i]
 	entire_name = file_name + str(i+1) + ".jpg"
 	myopener.retrieve(entire_url, entire_name)
-	os.system("mv " + entire_name + " ./" + folder_name + "/" + entire_name)
 #myopener = MyOpener()
 #myopener.retrieve(entire_url, file_name)
