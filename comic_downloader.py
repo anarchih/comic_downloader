@@ -3,7 +3,7 @@ import urllib.request
 import shutil
 import os
 url = "http://mh.99770.cc/comic/2779/21390/"
-
+url = input("Please input the url : ")
 furl =  ["http://58.215.241.39:9728/dm01/","http://58.215.241.39:9728/dm02/","http://58.215.241.39:9728/dm03/","http://58.215.241.206:9728/dm04/","http://58.215.241.39:9728/dm05/","http://58.215.241.39:9728/dm06/","http://58.215.241.39:9728/dm07/","http://58.215.241.39:9728/dm08/","http://58.215.241.206:9728/dm09/","http://58.215.241.39:9728/dm10/","http://58.215.241.39:9728/dm11/","http://58.215.241.206:9728/dm12/","http://58.215.241.39:9728/dm13/","http://173.231.57.238/dm14/","http://58.215.241.206:9728/dm15/","http://142.4.34.102/dm16/"]
 
 class MyOpener(urllib.request.FancyURLopener):
@@ -19,7 +19,6 @@ l = list (tag)
 k = []
 string = ''
 dm = 0
-
 while True:
 	if l[-1].isdigit():
 		dm = int(l[-1])
